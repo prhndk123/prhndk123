@@ -8,7 +8,7 @@ const keys = new Set();
 const stars = Array.from({length:65}, (_,i) => ({x:(i*173+79)%WIDTH,y:(i*71+13)%360,r:i%4===0?2:1}));
 const skyline = Array.from({length:24}, (_,i) => ({x:i*44,h:30+(i*37)%100}));
 function readBest() {try {localStorage.setItem('prhndk-commit-catcher-best', String(game.best));} catch {}}
-function reset() {game = startGame(game.best); keys.clear(); touchDirection=0; update(); canvas.focus({preventScroll:true});}
+function reset() {game = startGame(game.best); keys.clear(); touchDirection=0; $('announcement').textContent=''; update(); canvas.focus({preventScroll:true});}
 function pause() {togglePause(game);keys.clear();touchDirection=0;update();}
 function update() {
   $('score').textContent = String(game.score).padStart(4,'0');
