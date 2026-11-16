@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#10111f" />
+  <meta name="description" content="A tiny arcade by Prihandika. Catch commits, dodge bugs, and beat your local high score." />
+  <title>Commit Catcher · Prihandika's Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <main>
+    <nav aria-label="Main navigation"><a class="brand" href="https://github.com/prhndk123"><span class="brand-icon" aria-hidden="true">⌘</span> PRHNDK<span class="dim"> / ARCADE</span></a><a class="back" href="https://github.com/prhndk123">Back to GitHub <span aria-hidden="true">↗</span></a></nav>
+    <header>
+      <div><p class="eyebrow"><span class="status-dot"></span> A LITTLE BREAK BETWEEN COMMITS</p><h1>Commit <span>Catcher.</span></h1><p class="intro">Ship the green squares. Dodge the bugs.<br class="mobile-break" /> Make these 45 seconds count.</p></div>
+      <div class="edition"><span>PRIHANDIKA'S</span><strong>POCKET ARCADE</strong><span>VOL. 01 <b>✦</b> FREE TO PLAY</span></div>
+    </header>
+    <section class="cabinet" aria-label="Commit Catcher arcade game">
+      <div class="hud"><div><span>SCORE</span><strong id="score">0000</strong></div><div><span>PERSONAL BEST</span><strong id="best">0000</strong></div><div class="hud-lives"><span>HEALTH</span><strong id="lives" aria-label="3 lives">♥ ♥ ♥</strong></div><div><span>TIME LEFT</span><strong id="timer">45<span>s</span></strong></div><button id="pause" aria-label="Pause game" disabled>Ⅱ</button></div>
+      <div class="screen" id="screen">
+        <canvas id="game" width="960" height="540" tabindex="0" aria-label="Commit Catcher. Use left and right arrows or A and D to move. Catch green commits and avoid pink bugs."></canvas>
+        <div class="scanlines" aria-hidden="true"></div>
+        <div class="overlay" id="overlay">
+          <div class="overlay-content"><span class="coin" aria-hidden="true">✦</span><p class="eyebrow" id="overlay-label">PLAYER 01 · READY WHEN YOU ARE</p><h2 id="overlay-title">Small game.<br />Big commit energy.</h2><p id="overlay-copy">Catch green commits. Avoid pink bugs.<br />Five catches in a row level up your multiplier.</p><button class="play" id="play">LET'S PLAY <span aria-hidden="true">→</span></button><p class="keyboard-hint" id="overlay-hint">or press <kbd>SPACE</kbd> to start</p></div>
+        </div>
+        <div id="combo" class="combo" aria-live="polite"></div>
+      </div>
+      <div class="controls"><span><kbd>←</kbd> <kbd>→</kbd> or <kbd>A</kbd> <kbd>D</kbd> <span class="dim">to move</span></span><span class="desktop-hint"><kbd>SPACE</kbd> <span class="dim">pause / resume</span></span><span class="touch-hint">Drag your ship or use the arrows</span><div class="touch-buttons"><button id="left" aria-label="Move left">←</button><button id="right" aria-label="Move right">→</button></div><button id="restart" class="text-button">Restart ↺</button></div>
+    </section>
+    <section class="field-notes" aria-label="Game guide"><div><span class="note-number">01</span><div><h3>Collect the good stuff</h3><p>Every green commit starts at 10 points. Build a streak for up to a 4× multiplier.</p></div></div><div><span class="note-number pink">02</span><div><h3>Keep the bugs away</h3><p>Three hearts. One busy sky. Pink bugs cost a heart and reset your streak.</p></div></div><div><span class="note-number purple">03</span><div><h3>One more run?</h3><p>Your best score stays in this browser. No sign-up. Just you and the next high score.</p></div></div></section>
+    <footer><span>MADE BY <a href="https://github.com/prhndk123">PRIHANDIKA</a><span class="footer-star"> ✦ </span> IDEAS INTO INTERFACES.</span><a href="https://github.com/prhndk123/prhndk123/tree/main/docs">Peek at the source ↗</a></footer>
+    <p id="announcement" class="sr-only" aria-live="polite"></p>
+  </main>
+  <script type="module" src="game.mjs"></script>
+</body></html>

@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {freshGame,startGame,togglePause,tick,HEIGHT} from '../docs/engine.mjs';
+const stableRandom=()=>.5;
+const ready=freshGame();tick(ready,.05,1,stableRandom);assert.equal(ready.time,45);
+const game=startGame();game.spawn=100;game.items=[{x:480,y:HEIGHT-66,speed:0,type:'commit'}];tick(game,.01,0,stableRandom);assert.equal(game.score,10);assert.equal(game.caught,1);
+game.combo=4;game.items=[{x:480,y:HEIGHT-66,speed:0,type:'commit'}];tick(game,.01,0,stableRandom);assert.equal(game.score,30);assert.equal(game.combo,5);
+togglePause(game);const elapsed=game.elapsed;tick(game,.05,1,stableRandom);assert.equal(game.elapsed,elapsed);assert.equal(game.x,480);togglePause(game);
+game.lives=1;game.items=[{x:480,y:HEIGHT-66,speed:0,type:'bug'}];tick(game,.01,0,stableRandom);assert.equal(game.phase,'over');assert.equal(game.lives,0);assert.equal(game.best,30);
+const timed=startGame(80);timed.elapsed=44.99;timed.spawn=100;tick(timed,.05,0,stableRandom);assert.equal(timed.phase,'over');assert.equal(timed.time,0);assert.equal(timed.best,80);
+const bounds=startGame();bounds.spawn=100;bounds.x=34;tick(bounds,.05,-1,stableRandom);assert.equal(bounds.x,34);
+console.log('Game checks passed: start, collection, combo, pause, collision, timeout, high score, movement bounds.');

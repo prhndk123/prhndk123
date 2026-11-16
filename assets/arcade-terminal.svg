@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300"><defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><rect width="1" height="1" fill="#9b91bf" opacity=".1"/></pattern></defs>
+<rect x="1" y="1" width="1198" height="298" rx="12" fill="#151623" stroke="#39364f"/>
+<rect x="1" y="1" width="1198" height="45" rx="12" fill="#202032"/><path d="M1 45H1199" stroke="#39364f"/>
+<circle cx="25" cy="24" r="5" fill="#ff8fa4"/><circle cx="43" cy="24" r="5" fill="#f3cd8d"/><circle cx="61" cy="24" r="5" fill="#a3ffbd"/>
+<text x="600" y="29" text-anchor="middle" fill="#aaa1be" font-family="monospace" font-size="12">player-profile / prhndk123</text>
+<rect x="1" y="46" width="1198" height="253" fill="url(#dots)"/>
+<g font-family="monospace" font-size="21"><text x="36" y="94" fill="#a3ffbd">❯ whoami</text>
+<text x="36" y="136" fill="#f3f1e9" font-size="32" font-weight="bold">Hey, I'm Prihandika.</text>
+<text x="36" y="174" fill="#b4acc8">Building web projects. Exploring interfaces.</text>
+<text x="36" y="206" fill="#b4acc8">Learning by making things — one commit at a time.</text>
+<text x="36" y="263" fill="#c4aff5" font-size="17">TypeScript / React / React Router</text>
+<rect x="402" y="246" width="10" height="20" fill="#a3ffbd"><animate attributeName="opacity" values="1;1;0;0" dur="1.2s" repeatCount="indefinite"/></rect></g>
+<g fill="#a3ffbd"><path d="M16 0H32V16H64V0H80V16H64V32H80V48H96V96H80V112H64V96H32V112H16V96H0V48H16V32H32V16H16Z"/><rect x="16" y="112" width="16" height="16"/><rect x="64" y="112" width="16" height="16"/><path d="M0 48H-16V80H0M96 48H112V80H96"/><rect x="20" y="48" width="16" height="16" fill="#151623"/><rect x="60" y="48" width="16" height="16" fill="#151623"/><animateTransform attributeName="transform" type="translate" values="1010 100;1010 94;1010 100" dur="3s" repeatCount="indefinite"/></g></svg>
